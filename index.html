@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notas Pro · Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">📝 Notas Pro</a>
+    <nav class="menu">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="notes.html">Notas</a>
+      <a href="about.html">Acerca de</a>
+      <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Guarda tus ideas al instante.</h1>
+      <p>Una app web simple de notas que funciona 100% en tu navegador, sin cuentas y sin internet. Tus notas se guardan en tu dispositivo.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="notes.html#new">Crear nota</a>
+        <a class="btn" href="notes.html">Ver mis notas</a>
+      </div>
+    </div>
+    <div class="hero-aside">
+      <ul class="checks">
+        <li>✔️ Rápida y ligera</li>
+        <li>✔️ Guarda en localStorage</li>
+        <li>✔️ Editar y borrar notas</li>
+        <li>✔️ Búsqueda instantánea</li>
+      </ul>
+    </div>
+  </main>
+
+  <section class="features">
+    <div class="card">
+      <h3>Sin cuentas</h3>
+      <p>No necesitas registrarte. Todo queda en tu navegador.</p>
+    </div>
+    <div class="card">
+      <h3>Privado</h3>
+      <p>Los datos no salen de tu equipo. Tú controlas tu información.</p>
+    </div>
+    <div class="card">
+      <h3>Open Source</h3>
+      <p>Código claro y sencillo. Ideal para tareas y prácticas.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Notas Pro. Hecho con ❤️ para practicar Git/GitHub Pages.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

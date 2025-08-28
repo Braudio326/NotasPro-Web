@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notas Pro · Mis notas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">📝 Notas Pro</a>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a class="active" href="notes.html">Notas</a>
+      <a href="about.html">Acerca de</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Mis notas</h1>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Buscar por título o contenido..." />
+      <div class="spacer"></div>
+      <button id="exportBtn" class="btn">Exportar JSON</button>
+      <label class="import-label btn">
+        Importar JSON
+        <input id="importInput" type="file" accept="application/json" hidden />
+      </label>
+      <a class="btn primary" href="#new" id="newBtn">Nueva nota</a>
+    </div>
+
+    <section id="editor" class="editor hidden">
+      <h2 id="editorTitle">Nueva nota</h2>
+      <form id="noteForm">
+        <input type="hidden" id="noteId" />
+        <label>Título
+          <input id="title" type="text" placeholder="Ej: Ideas del proyecto" required />
+        </label>
+        <label>Contenido
+          <textarea id="content" rows="6" placeholder="Escribe aquí..." required></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary">Guardar</button>
+          <button type="button" id="cancelBtn" class="btn">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <ul id="list" class="notes-list"></ul>
+      <p id="empty" class="empty">No hay notas todavía. Crea la primera con “Nueva nota”.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Notas Pro.</p>
+  </footer>
+
+  <script src="js/notes.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
