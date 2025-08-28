@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notas Pro · Acerca de</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">📝 Notas Pro</a>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="notes.html">Notas</a>
+      <a class="active" href="about.html">Acerca de</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Acerca de esta app</h1>
+    <p>
+      Esta es una app web de ejemplo para tu evaluación. Cumple con:
+    </p>
+    <ul>
+      <li>NavBar, Hero (en Inicio) y Footer en todas las páginas.</li>
+      <li>Otra página con información diferente (esta misma).</li>
+      <li>Funcionalidad básica: crear, listar, buscar, editar y borrar notas guardadas en <code>localStorage</code>.</li>
+      <li>Despliegue listo para GitHub Pages (HTML/CSS/JS estático).</li>
+    </ul>
+
+    <h2>¿Cómo se guardan las notas?</h2>
+    <p>
+      Las notas se guardan localmente en tu navegador usando <code>localStorage</code> bajo la clave <code>notas_pro_v1</code>.
+      Si borras los datos del navegador o cambias de dispositivo, las notas no se sincronizan. Para respaldar, exporta a JSON
+      (botón en la página Notas) y guarda el archivo.
+    </p>
+
+    <h2>Créditos</h2>
+    <p>
+      Proyecto educativo y libre. Úsalo como base para tus tareas.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Notas Pro.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
